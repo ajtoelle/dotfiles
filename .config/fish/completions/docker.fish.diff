@@ -1,0 +1,12 @@
+123a124
+> complete -c docker -A -f -n '__fish_seen_subcommand_from create' -l device-cgroup-rule -d 'Add a rule to the cgroup allowed devices list (e.g. --device-cgroup-rule="c 13:37 rwm")'
+138c139
+< complete -c docker -A -f -n '__fish_seen_subcommand_from create' -l mac-address -d 'Container MAC address (e.g. 92:d0:c6:0a:29:33)'
+---
+> complete -c docker -A -f -n '__fish_seen_subcommand_from create' -l mac-address -d 'Container MAC address (e.g., 92:d0:c6:0a:29:33)'
+314a316
+> complete -c docker -A -f -n '__fish_seen_subcommand_from create' -l device-cgroup-rule -d 'Add a rule to the cgroup allowed devices list (e.g. --device-cgroup-rule="c 13:37 rwm")'
+329c331
+< complete -c docker -A -f -n '__fish_seen_subcommand_from run' -l mac-address -d 'Container MAC address (e.g. 92:d0:c6:0a:29:33)'
+---
+> complete -c docker -A -f -n '__fish_seen_subcommand_from run' -l mac-address -d 'Container MAC address (e.g., 92:d0:c6:0a:29:33)'
