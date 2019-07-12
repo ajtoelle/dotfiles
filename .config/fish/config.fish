@@ -25,4 +25,4 @@ set -gx PATH $PATH /usr/local/sbin
 
 # start gpg agent <- added for blackbox
 #eval (gpg-agent --daemon)
-ssh-add -K /Users/ajtoelle/.ssh/id_rsa
+ssh-add -K $HOME/.ssh/id_rsa
