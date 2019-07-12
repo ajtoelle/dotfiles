@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+// I want to stop thinking about this...
+const fs = require('fs')
+const { execSync } = require('child_process')
+
+const msgFile = process.env.GIT_PARAMS
+  ? process.env.GIT_PARAMS
+  : process.argv[2]
+
+const branch = execSync(`git rev-parse --abbrev-ref HEAD`).toString()
+const ids = branch.match(/([A-Z]{2,3}-\d{4})/g)
+if(ids && ids.length && fs.existsSync(msgFile)){
+  const message = fs.readFileSync(msgFile).toString()
+  const amended = ids.reduce((msg, id) => {
+    const regex = new RegExp(id)
+    return regex.test(msg)
+      ? msg
+      : `[${id}] ` + msg
+  }, message);
+  fs.writeFileSync(msgFile, amended)
+}

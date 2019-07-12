@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+	name = andrew toelle
+	email = andrew.toelle@waltzapp.com
+# Please adapt and uncomment the following lines:
+#	email = andrew.toelle@waltzapp.com
+[init]
+	templatedir = ~/.git-templates
