@@ -1,2 +1,4 @@
 .cfg
 .config/fish/fishd.*
+.vim/plugged
+.vim/.netrwhist
